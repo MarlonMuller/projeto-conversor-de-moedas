@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="./assets/logo.gif" alt="logo-currency-converter">
+    <main>
+        <label>Converter <b>de</b>
+        <select name="currencyToConvert" id="currencyToConvert">
+            <option value="real">R$ Real brasileiro</option>
+        </select>
+        </label>
+        <label>Converter <b>para</b>
+        <select name="currencyConverted" id="currencyConverted">
+            <option value="dolar">US$ Dólar americano</option>
+            <option value="euro">€ Euro</option>
+        </select>
+        </label>
+        <label>Valor
+            <input type="number" name="valueToConvert" id="valueToConvert">
+        </label>
+        <button type="submit">Converter</button>
+    </main>
+    <section id="resultSection">
+        <div>
+            <img src="./assets/real.png" alt="Brasil">
+            <p>Real</p>
+            <p>R$ 00</p>
+        </div>
+        <img src="./assets/arrow.png" alt="seta">
+        <div>
+            <img src="./assets/dolar.png" alt="USA">
+            <p>Dólar</p>
+            <p>US$ 00</p>
+        </div>
+    </section>
+</body>
+</html>
