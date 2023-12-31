@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="./assets/logo.gif" alt="logo-currency-converter">
+    <img id="money" src="./assets/logo.gif" alt="logo-currency-converter">
     <main>
         <label>Converter <b>de</b>
         <select name="currencyToConvert" id="currencyToConvert">
@@ -24,19 +24,20 @@
             <input type="number" name="valueToConvert" id="valueToConvert">
         </label>
         <button type="submit">Converter</button>
+        <section id="resultSection">
+            <div>
+                <img src="./assets/real.png" alt="Brasil">
+                <p>Real</p>
+                <p class="currencyValue">R$ 00</p>
+            </div>
+            <img id="arrow" src="./assets/arrow.png" alt="seta">
+            <div>
+                <img src="./assets/dolar.png" alt="USA">
+                <p>Dólar</p>
+                <p class="currencyValue">US$ 00</p>
+            </div>
+        </section>
     </main>
-    <section id="resultSection">
-        <div>
-            <img src="./assets/real.png" alt="Brasil">
-            <p>Real</p>
-            <p>R$ 00</p>
-        </div>
-        <img src="./assets/arrow.png" alt="seta">
-        <div>
-            <img src="./assets/dolar.png" alt="USA">
-            <p>Dólar</p>
-            <p>US$ 00</p>
-        </div>
-    </section>
 </body>
+<script src="./scripts.js"></script>
 </html>
