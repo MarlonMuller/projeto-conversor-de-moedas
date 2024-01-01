@@ -15,7 +15,7 @@
         </select>
         </label>
         <label>Converter <b>para</b>
-        <select name="currencyConverted" id="currencyConverted">
+        <select name="currencyConverted" id="currencyConvertedSelected">
             <option value="dolar">US$ Dólar americano</option>
             <option value="euro">€ Euro</option>
         </select>
@@ -28,13 +28,13 @@
             <div>
                 <img src="./assets/real.png" alt="Brasil">
                 <p>Real</p>
-                <p class="currencyValue">R$ 00</p>
+                <p class="currencyValueBefore">R$ 0,00</p>
             </div>
             <img id="arrow" src="./assets/arrow.png" alt="seta">
             <div>
-                <img src="./assets/dolar.png" alt="USA">
-                <p>Dólar</p>
-                <p class="currencyValue">US$ 00</p>
+                <img id="imgCurrecyConverted" src="./assets/dolar.png" alt="USA">
+                <p id="currencyConvertedName">Dólar americano</p>
+                <p class="currencyValueAfter">US$ 0.00</p>
             </div>
         </section>
     </main>
