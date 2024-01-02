@@ -1,38 +1,37 @@
 const button = document.querySelector("button");
-const currencySelect = document.querySelector("#currencyConvertedSelected");
+const currencySelectedToCovert = document.querySelector("#currencyConvertedSelected");
+const currencySelectToConvert = document.querySelector("#currencySelectToConvert");
 
 
 function toConvert() {
     const inputValue = document.querySelector("#valueToConvert").value;
     const currencyValueBefore = document.querySelector(".currencyValueBefore");
     const currencyValueAfter = document.querySelector(".currencyValueAfter");
-    const currencySelected = document.querySelector("#currencyConvertedSelected").value;
+    const currencySelectedToCovert = document.querySelector("#currencyConvertedSelected").value;
 
     const dolarToday = 5.20;
     const euroToday = 6.40;
     const libraToday = 6.28;
     const bitcoinToday = 221600.54;
 
-    if (currencySelected == "dolar") {
+    if (currencySelectedToCovert == "dolar") {
 
         currencyValueAfter.innerHTML = Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(inputValue / dolarToday)
     }
 
-    if (currencySelected == "euro") {
+    if (currencySelectedToCovert == "euro") {
 
         currencyValueAfter.innerHTML = Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(inputValue / euroToday)
     }
 
-    if (currencySelected == "libra") {
+    if (currencySelectedToCovert == "libra") {
 
         currencyValueAfter.innerHTML = Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP" }).format(inputValue / libraToday)
     }
 
-    if (currencySelected == "bitcoin") {
+    if (currencySelectedToCovert == "bitcoin") {
 
         const bitcoin = Intl.NumberFormat("en-US", { style: "decimal", minimumFractionDigits: 8 }).format(inputValue / bitcoinToday)
-
-
         currencyValueAfter.innerHTML = `${bitcoin} BTC`
     }
 
@@ -43,22 +42,22 @@ function changeCurrency () {
     const imgConverted = document.getElementById("imgCurrecyConverted");
     const currencyConvertedName = document.querySelector("#currencyConvertedName")
     
-    if (currencySelect.value == "dolar"){
+    if (currencySelectedToCovert.value == "dolar"){
         imgConverted.src = "./assets/dolar.png"
         currencyConvertedName.innerHTML = "Dólar americano"
     }
 
-    if (currencySelect.value == "euro"){
+    if (currencySelectedToCovert.value == "euro"){
         imgConverted.src = "./assets/euro.png"
         currencyConvertedName.innerHTML = "Euro"
     }
 
-    if (currencySelect.value == "libra"){
+    if (currencySelectedToCovert.value == "libra"){
         imgConverted.src = "./assets/libra.png"
         currencyConvertedName.innerHTML = "Libra"
     }
 
-    if (currencySelect.value == "bitcoin"){
+    if (currencySelectedToCovert.value == "bitcoin"){
         imgConverted.src = "./assets/bitcoin.png"
         currencyConvertedName.innerHTML = "Bitcoin"
     }
@@ -68,4 +67,4 @@ toConvert()
 
 button.addEventListener("click", toConvert);
 
-currencySelect.addEventListener("change", changeCurrency)
+currencySelectedToCovert.addEventListener("change", changeCurrency)
